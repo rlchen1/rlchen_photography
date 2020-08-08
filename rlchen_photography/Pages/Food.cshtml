@@ -1,0 +1,54 @@
+﻿@page
+@model Photography_Project.Pages.FoodModel
+@{
+    ViewData["Title"] = "Food Photography";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="~/css/Food.css" type="text/css" />
+</head>
+<body>
+    <div class="row">
+        <div class="left-bg"></div>
+
+        <div class="container"></div>
+        <h2>@ViewData["Title"]</h2>
+        <br />
+
+        <div class="row">
+            <div class="column">
+                <img src="~/images/food6-re.jpg" class="responsive">
+                <p>Ichiran Ramen</p><br />
+            </div>
+            <div class="column">
+                <img src="~/images/food5-re.jpg" class="responsive">
+                <p>Sanuki Udon Hanamaru</p><br />
+            </div>
+            <div class="column">
+                <img src="~/images/Food1-re.jpg" class="responsive">
+                <p>Soondubu Jjigae - Homemade</p><br />
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="~/images/food4-re.jpg" class="responsive">
+                <p>Tartar Fried Chicken & Miso - Sanagi</p><br />
+            </div>
+            <div class="column">
+                <img src="~/images/food2-re.jpg" class="responsive">
+                <p>Wonton Soup - Cheung Hing</p><br />
+            </div>
+            <div class="column">
+                <img src="~/images/food3-re.jpg" class="responsive">
+                <p>Chicken Katsu Sandwich - Volcano SF</p><br />
+            </div>
+        </div>
+        <br /><br /><br />
+
+        <div class="right-bg"></div>
+    </div>
+</body>
+</html>

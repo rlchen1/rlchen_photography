@@ -1,0 +1,31 @@
+﻿@page
+@model Photography_Project.Pages.ContactModel
+@{
+    ViewData["Title"] = "Contact";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/Contact.css" type="text/css" />
+</head>
+<body>
+    <div class="row">
+        <div class="left-bg"></div>
+        <div class="=container">
+            <h2>@ViewData["Title"]</h2>
+            <h3>@Model.Message</h3>
+
+            <strong>Phone:</strong> 925.209.8358
+            <address>
+                <strong>Email:</strong> <a href="mailto:roblchenphotography@gmail.com">roblchenphotography@gmail.com</a><br /></br>
+            </address>
+
+            <h3>Social Media</h3>
+            <img src="~/images/ig-logo.png" align="left" width="30" height="25" style="padding-right:5px"> <strong>Instagram:</strong> <a href="https://www.instagram.com/rlchen.photography/"> rlchen.photography</a>
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        </div>
+        <div class="right-bg"></div>
+    </div>
+</body>
+</html>

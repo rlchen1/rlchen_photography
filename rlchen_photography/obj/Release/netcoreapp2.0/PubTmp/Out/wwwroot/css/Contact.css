@@ -1,0 +1,42 @@
+﻿
+.row {
+    width: 100%;
+    position: relative;
+}
+
+.left-bg {
+    width: 10%;
+    height: 114%;
+    top: 0px;
+    left: -15%;
+    position: absolute;
+    background: aliceblue;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.right-bg {
+    width: 10%;
+    height: 114%;
+    top: 0px;
+    left: 108%;
+    position: absolute;
+    background: aliceblue;
+}
+
+@media screen and (max-width: 600px) {
+    /*center on mobile screen when row collapses under 600px*/
+    .row {
+        margin: auto;
+    }
+
+    .right-bg {
+        visibility: hidden; /*not seen in mobile, but seen in condensed desktop*/
+    }
+
+    .left-bg {
+        visibility: hidden;
+    }
+}

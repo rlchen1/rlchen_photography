@@ -1,0 +1,153 @@
+﻿/* Page Structure */
+.row {
+    width: 100%;
+    position: relative;
+}
+
+.left-bg {
+    width: 13%;
+    height: 114%;
+    top: 0px;
+    left: -15%;
+    position: absolute;
+    background: aliceblue;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.right-bg {
+    width: 13%;
+    height: 114%;
+    top: 0px;
+    left: 105%;
+    position: absolute;
+    background: aliceblue;
+}
+
+/* Bootstrap carousel */
+
+/* Set the max carousel container size, center the div*/
+#myCarousel {
+    max-width: 750px;
+    max-height: 350px;
+    margin: auto;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-inner {
+    width: 750px;
+    height: 350px;
+}
+
+/* 4 columns */
+.col-md-3 > ul {
+    list-style-position: inside;
+    padding-left: 31%
+}
+
+.title-font {
+    font-family: 'Brush Script MT';
+    font-size: 36px;
+    text-align: center;
+    margin-top: -5px;
+}
+
+.urban-image {
+    margin: 0px 0px 0px 0px;
+    padding: 5px 0px 10px 12px;
+}
+
+.urban-image img {
+    width: 70px;
+    height: 65px;
+}
+
+.travel-image {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 5px 11px;
+}
+
+.travel-image img{
+    width: 80px;
+    height: 75px;
+}
+
+.model-image {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 5px 9px;
+}
+
+.model-image img {
+    width: 80px;
+    height: 75px;
+}
+
+.food-image {
+    margin: 0px 0px 0px 0px;
+    padding: 5px 0px 11px 13px;
+}
+
+.food-image img {
+    width: 67px;
+    height: 62px;
+}
+
+.d-none {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    /*center the images on mobile screen when row collapses under 600px*/
+    .row {
+        margin: auto;
+    }
+
+    /* Set the max carousel container size, center the div*/
+    #myCarousel {
+        max-width: 300px;
+        max-height: 200px;
+        margin: auto;
+    }
+
+    .carousel img {
+        width: 299px;
+        min-height: 200px;
+    }
+
+    .carousel-inner {
+        width: 300px;
+        height: 200px;
+    }
+
+    .title-font {
+        margin-top: -18px;
+    }
+
+    .col-md-3 {
+        margin-bottom: 30px;
+    }
+
+    .col-md-3 > ul {
+        list-style-position: inside;
+        margin: auto;
+    }
+
+    .right-bg {
+        visibility: hidden; /*not seen in mobile, but seen in condensed desktop*/
+    }
+
+    .left-bg {
+        visibility: hidden;
+    }
+
+    .h2 {
+        font-size: 12px;
+    }
+}
+

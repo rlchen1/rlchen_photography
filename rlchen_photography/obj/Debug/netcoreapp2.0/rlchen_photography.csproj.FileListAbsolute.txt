@@ -1,0 +1,11 @@
+C:\Users\Robert\source\repos\rlchen_photography\rlchen_photography\bin\Debug\netcoreapp2.0\rlchen_photography.deps.json
+C:\Users\Robert\source\repos\rlchen_photography\rlchen_photography\bin\Debug\netcoreapp2.0\rlchen_photography.runtimeconfig.json
+C:\Users\Robert\source\repos\rlchen_photography\rlchen_photography\bin\Debug\netcoreapp2.0\rlchen_photography.runtimeconfig.dev.json
+C:\Users\Robert\source\repos\rlchen_photography\rlchen_photography\bin\Debug\netcoreapp2.0\rlchen_photography.dll
+C:\Users\Robert\source\repos\rlchen_photography\rlchen_photography\bin\Debug\netcoreapp2.0\rlchen_photography.pdb
+C:\Users\Robert\source\repos\rlchen_photography\rlchen_photography\obj\Debug\netcoreapp2.0\rlchen_photography.csprojResolveAssemblyReference.cache
+C:\Users\Robert\source\repos\rlchen_photography\rlchen_photography\obj\Debug\netcoreapp2.0\rlchen_photography.csproj.CoreCompileInputs.cache
+C:\Users\Robert\source\repos\rlchen_photography\rlchen_photography\obj\Debug\netcoreapp2.0\rlchen_photography.AssemblyInfoInputs.cache
+C:\Users\Robert\source\repos\rlchen_photography\rlchen_photography\obj\Debug\netcoreapp2.0\rlchen_photography.AssemblyInfo.cs
+C:\Users\Robert\source\repos\rlchen_photography\rlchen_photography\obj\Debug\netcoreapp2.0\rlchen_photography.dll
+C:\Users\Robert\source\repos\rlchen_photography\rlchen_photography\obj\Debug\netcoreapp2.0\rlchen_photography.pdb

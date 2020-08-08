@@ -1,0 +1,50 @@
+﻿@page
+@model Photography_Project.Pages.TravelModel
+@{
+    ViewData["Title"] = "Travel Photography";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="~/css/Travel.css" type="text/css" />
+</head>
+<body>
+    <div class="row">
+        <div class="left-bg"></div>
+
+        <div class="container"></div>
+        <h2>@ViewData["Title"]</h2>
+        <br />
+
+        <div class="row">
+            <div class="column">
+                <img src="~/images/DSC01144-re.jpg" class="responsive">
+                <p>Tokyo DisneySea</p><br />
+            </div>
+            <div class="column">
+                <img src="~/images/DSC01138-re.jpg" class="responsive">
+                <p>Tokyo DisneySea</p><br />
+            </div>
+            <div class="column">
+                <img src="~/images/DSC01132-re.jpg" class="responsive">
+                <p>Tokyo DisneySea</p><br />
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="~/images/DSC00732-re.jpg" class="responsive">
+                <p>Baker's Beach</p><br />
+            </div>
+            <div class="column">
+                <img src="~/images/RC6-re.jpg" class="responsive">
+                <p>Lake Elizabeth Park</p><br />
+            </div>
+        </div>
+        <br /><br /><br />
+
+        <div class="right-bg"></div>
+    </div>
+</body>
+</html>

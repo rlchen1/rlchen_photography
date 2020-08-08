@@ -1,0 +1,165 @@
+﻿@page
+@model Photography_Project.Pages.IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/Index.css" type="text/css" />
+</head>
+<body>
+    <div class="row">
+        <div class="left-bg"></div>
+        <div class="container">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="~/images/RC4-main-re2.jpg" alt="Urban" class="img-responsive"/>
+                        <div class="carousel-caption" role="option">
+                            <p>
+                                <h2>AESTHETIC PHOTOGRAPHY</h2>
+                             <a class="btn btn-default" <a asp-page="/Aesthetic"/>
+                                 See Gallery
+                             </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="~/images/DSC00732-main2.jpg" alt="Landscape" class="img-responsive" />
+                        <div class="carousel-caption" role="option">
+                            <p>
+                                <h2>TRAVEL PHOTOGRAPHY</h2>
+                                <a class="btn btn-default" <a asp-page="/Travel"/>
+                                    See Gallery
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="~/images/RL6-2-main-re2.jpg" alt="People" class="img-responsive" />
+                        <div class="carousel-caption" role="option">
+                            <p>
+                                <h2>MODEL PHOTOGRAPHY</h2>
+                                <a class="btn btn-default" <a asp-page="/Model"/>
+                                    See Gallery
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="~/images/food6-main2.jpg" alt="Foods" class="img-responsive" />
+                        <div class="carousel-caption" role="option">
+                            <p>
+                                <h2>FOOD PHOTOGRAPHY</h2>
+                                <a class="btn btn-default" <a asp-page="/Food"/>
+                                    See Gallery
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+            <br /><br />
+            <p class="title-font"><b>Welcome to RLChen Photography!</b></p>
+            <div class="row">
+                <div class="col-md-3">
+                    <h2 class="text-center">Aesthetic</h2>
+                    <ul>
+                        <div class="urban-image">
+                            <img src="~/images/city.png" />
+                        </div>
+                        <a class="btn btn-default" <a asp-page="/Aesthetic"/>
+                            See Gallery
+                        </a>
+                        <br />
+                        <br />
+                        <li>Architecture</li>
+                        <li>Artistic</li>
+                        <li>Bokeh Effect</li>
+                        <li>Lightwork</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h2 class="text-center">Travel </h2>
+                    <ul>
+                        <div class="travel-image">
+                            <img src="~/images/travel2.jpg" />
+                        </div>
+                        <a class="btn btn-default" <a asp-page="/Travel"/>
+                            See Gallery
+                        </a>
+                        </br><br/>
+                        <li>Sightseeing</li>
+                        <li>Nature</li>
+                        <li>
+                            Cities
+                            <ul style="padding-left: 20px">
+                                <li>San Francisco</li>
+                                <li>Tokyo</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h2 class="text-center">Model </h2>
+                    <ul>
+                        <div class="model-image">
+                            <img src="~/images/camera.jpg" />
+                        </div>
+                        <a class="btn btn-default" <a asp-page="/Model"/>
+                            See Gallery
+                        </a>
+                        <br />
+                        <br />
+                        <li>Photoshoots</li>
+                        <li>Action Shots</li>
+                        <li>Fashion</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h2 class="text-center">Food </h2>
+                    <ul>
+                        <div class="food-image">
+                            <img src="~/images/food-icon.png" />
+                        </div>
+                        <a class="btn btn-default" <a asp-page="/Food"/>
+                            See Gallery
+                        </a>
+                        <br />
+                        <br />
+                        <li>Street Food</li>
+                        <li>Homemade</li>
+                    </ul>
+                </div>
+            </div>
+            <br/><br/>
+         </div>
+         <div class="right-bg"></div>
+     </div>
+<div class="d-none">Useful Development Links:
+    <li><a href="https://go.microsoft.com/fwlink/?LinkID=398609">Publish to Microsoft Azure App Service</a></li>
+    <li><a href="https://go.microsoft.com/fwlink/?LinkId=699315">Manage User Secrets using Secret Manager.</a></li>
+    <li><a href="https://go.microsoft.com/fwlink/?LinkId=699316">Use logging to log a message.</a></li>
+    <li><a href="https://go.microsoft.com/fwlink/?LinkId=398602">Working with Data</a></li>
+    <li><a href="https://go.microsoft.com/fwlink/?LinkId=398603">Security</a></li>
+    <li><a href="https://go.microsoft.com/fwlink/?LinkID=699321">Client side development</a></li>
+</div>
+</body>
+</html>

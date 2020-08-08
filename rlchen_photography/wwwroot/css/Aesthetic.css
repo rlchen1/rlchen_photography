@@ -1,0 +1,86 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 1% 1% 1% 1%;
+}
+
+    .column img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        height: 100%;
+        max-height: 220px; /*fix uneven heights between columns, 10px less than models*/
+        margin-top: -20px; /*reduce gap between images in columns*/
+    }
+
+    .column .responsive {
+        width: 100%;
+    }
+
+    .column p {
+        text-align: center;
+        font-family: monospace;
+        margin-bottom: -10px;
+    }
+
+.row {
+    width: 100%;
+    position: relative;
+    padding-left: 3%;
+}
+
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+.left-bg {
+    width: 10%;
+    height: 114%;
+    top: 0px;
+    left: -15%;
+    position: absolute;
+    background: aliceblue;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.right-bg {
+    width: 10%;
+    height: 114%;
+    top: 0px;
+    left: 108%;
+    position: absolute;
+    background: aliceblue;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+
+    /*center the images on mobile screen when row collapses under 600px*/
+    .row {
+        margin-left: -4px;
+    }
+
+    .right-bg {
+        visibility: hidden; /*not seen in mobile, but seen in condensed desktop*/
+    }
+
+    .left-bg {
+        visibility: hidden;
+    }
+
+    .column p {
+        margin-bottom: 3px;
+    }
+}

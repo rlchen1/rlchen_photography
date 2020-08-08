@@ -1,0 +1,143 @@
+﻿/* Use # for id: id="idname"
+       . for class: div="divname"
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+input[type=text]:focus {
+    border: 2px solid #555;
+}
+
+input:focus:required:invalid {
+    border: red solid 1px;
+}
+
+.ast::after {
+    content: "*";
+    color: red;
+}
+
+.ast-email::after {
+    content: "*";
+    color: red;
+}
+
+#first_name {
+    font-size: 12pt;
+    height: 30px;
+    width: 250px;
+}
+
+#last_name {
+    font-size: 12pt;
+    height: 30px;
+    width: 250px;
+}
+
+.email {
+    float: left;
+    width: 40%; /*increased to expand "Email Address" into same line*/
+    padding: 0px 10px;
+    margin-left: 50px;
+    margin-right: 1000px; /*force "Date" to start on next line*/
+}
+
+#emailid {
+    font-size: 12pt;
+    height: 30px;
+    width: 250px;
+}
+
+.date {
+    float: left;
+    width: 25%;
+    padding: 0px 0px 10px 10px; 
+    margin-left: 65px;
+    margin-right: 1000px; /*force "Comments" to start on next line*/
+}
+
+#commentbox {
+    font-size: 12pt;
+    margin-left: 15px;
+}
+
+.characters {
+    margin-bottom: 20px;
+    margin-top: -18px;
+    margin-left: 0%;   
+}
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 0px 10px 10px 10px; /*padding-left increased to center the div on page*/
+    margin-left: 65px;
+    margin-bottom: 30px;
+}
+
+.column .responsive {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+}
+
+.row {
+    width: 100%;
+    position: relative;
+}
+
+.left-bg {
+    width: 10%;
+    height: 114%;
+    top: 0px;
+    left: -15%;
+    position: absolute;
+    background: aliceblue;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.right-bg {
+    width: 10%;
+    height: 114%;
+    top: 0px;
+    left: 108%;
+    position: absolute;
+    background: aliceblue;
+}
+
+@media screen and (max-width: 600px) {
+    /*center on mobile screen when row collapses under 600px*/
+    .row {
+        margin: auto;
+    }
+
+    .right-bg {
+        visibility: hidden; /*not seen in mobile, but seen in condensed desktop*/
+    }
+
+    .left-bg {
+        visibility: hidden;
+    }
+
+    .ast {
+        padding-left: 25px;
+    }
+
+    #first_name {
+        margin-left: 25px;
+    }
+
+    #last_name {
+        margin-left: 25px;
+    }
+
+    #commentbox {
+        width: 300px;
+        height: auto;
+    }
+}

@@ -1,0 +1,43 @@
+﻿@page
+@model Photography_Project.Pages.AboutModel
+@{
+    ViewData["Title"] = "About Me";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/About.css" type="text/css" />
+</head>
+<body>
+    <div class="row">
+        <div class="left-bg"></div>
+        <div class="container">
+            <h2>@ViewData["Title"]</h2>
+            <h3>@Model.Message</h3>
+
+            <br /></br>
+            <img src="~/images/DSC00801-re.jpg">
+            <div style="font-size:16px">
+                Based in the Bay and Orange County, I have been experimenting with photography for 2 years to find my "style". I primarily work with 1-on-1 portrait-style background-complimentary
+                images for clients. I specialize in light-based shots (bokeh effect, lightwork, etc. ) that appeal to a more modern and abstract photography standard.
+                Among my favorites are those taken whilst travelling the globe (Tokyo & San Francisco). There is a world of adventure out there!
+                <br /><br />
+                I work with a SonyA6000 mirrorless camera, 50-210mm wide lens, and run editing on GIMP software.
+                My stylistic preference is a model-oriented approach; you are the star with the world as your stage.
+            </div>
+            <br /></br>
+            <div style="font-size:20px; color: #0000A0"><center>"It's not about <u><i>where</i></u>, but <u><i>how</i></u> the picture is taken."</center></div>
+            <br /></br>
+            <br /></br>
+            <br /></br>
+            <br /></br>
+            <br /></br>
+            <br /></br>
+            <br /></br>
+        </div>
+        <div class="right-bg" ></div>
+    </div>
+</body>
+</html>
+
