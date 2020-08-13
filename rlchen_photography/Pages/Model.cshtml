@@ -9,6 +9,51 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="~/css/Model.css" type="text/css" />
+    <script>
+        // Open the Modal
+        function openModal() {
+            /* Only allow lightbox modal feature on screen widths >599px */
+            if ($(window).width() > 599) {
+                document.getElementById("myModal").style.display = "block";
+            }
+        }
+
+        // Close the Modal
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            captionText.innerHTML = dots[slideIndex - 1].alt;
+        }
+    </script>
 </head>
 <body>
     <div class="row">
@@ -20,86 +65,192 @@
         <!--Structure is in rows with 3 columns per row-->
         <div class="row">
             <div class="column">
-                <img src="~/images/RL6-2-re.jpg" class="responsive">
+                <img src="~/images/RL6-2-re.jpg" class="responsive" onclick="openModal();currentSlide(1)">
                 <p>VKCC </p><br />
             </div>
             <div class="column">
-                <img src="~/images/RL7-re.jpg" class="responsive">
+                <img src="~/images/RL7-re.jpg" class="responsive" onclick="openModal();currentSlide(2)">
                 <p>VKCC </p><br />
             </div>
             <div class="column">
-                <img src="~/images/DSC01353-re.jpg" class="responsive">
+                <img src="~/images/DSC01353-re.jpg" class="responsive" onclick="openModal();currentSlide(3)">
                 <p>VKCC </p><br />
             </div>
         </div>
         <div class="row">
             <div class="column">
-                <img src="~/images/DSC00943-2-re.jpg" class="responsive">
+                <img src="~/images/DSC00943-2-re.jpg" class="responsive" onclick="openModal();currentSlide(4)">
                 <p>TeamLab Borderless </p><br />
             </div>
             <div class="column">
-                <img src="~/images/DSC00920-2-re.jpg" class="responsive">
+                <img src="~/images/DSC00920-2-re.jpg" class="responsive" onclick="openModal();currentSlide(5)">
                 <p>TeamLab Borderless</p><br />
             </div>
             <div class="column">
-                <img src="~/images/DSC01169-re.jpg" class="responsive">
+                <img src="~/images/DSC01169-re.jpg" class="responsive" onclick="openModal();currentSlide(6)">
                 <p>Tokyo Tower 35F</p><br />
             </div>
         </div>
         <div class="row">
             <div class="column">
-                <img src="~/images/TE4-re.jpg" class="responsive">
+                <img src="~/images/TE4-re.jpg" class="responsive" onclick="openModal();currentSlide(7)">
                 <p>ARTIC</p><br />
             </div>
             <div class="column">
-                <img src="~/images/TE3-re.jpg" class="responsive">
+                <img src="~/images/TE3-re.jpg" class="responsive" onclick="openModal();currentSlide(8)">
                 <p>ARTIC</p><br />
             </div>
             <div class="column">
-                <img src="~/images/TE6-re2.jpg" class="responsive">
+                <img src="~/images/TE6-re2.jpg" class="responsive" onclick="openModal();currentSlide(9)">
                 <p>ARTIC</p><br />
             </div>
         </div>
         <div class="row">
             <div class="column">
-                <img src="~/images/DSC00625-re.jpg" class="responsive">
+                <img src="~/images/DSC00625-re.jpg" class="responsive" onclick="openModal();currentSlide(10)">
                 <p>UCI SQDF 2019</p><br />
             </div>
             <div class="column">
-                <img src="~/images/DSC00601-re.jpg" class="responsive">
+                <img src="~/images/DSC00601-re.jpg" class="responsive" onclick="openModal();currentSlide(11)">
                 <p>UCI SQDF 2019</p><br />
             </div>
             <div class="column">
-                <img src="~/images/DSC00606-re.jpg" class="responsive">
+                <img src="~/images/DSC00606-re.jpg" class="responsive" onclick="openModal();currentSlide(12)">
                 <p>UCI SQDF 2019</p><br />
             </div>
         </div>
         <div class="row">
             <div class="column">
-                <img src="~/images/AN4-re.jpg" class="responsive">
+                <img src="~/images/AN4-re.jpg" class="responsive" onclick="openModal();currentSlide(13)">
                 <p>Downtown San Francisco</p><br />
             </div>
             <div class="column">
-                <img src="~/images/AN12-re.jpg" class="responsive">
+                <img src="~/images/AN12-re.jpg" class="responsive" onclick="openModal();currentSlide(14)">
                 <p>SF Museum of Ice Cream</p><br />
             </div>
             <div class="column">
-                <img src="~/images/AN1-re.jpg" class="responsive">
+                <img src="~/images/AN1-re.jpg" class="responsive" onclick="openModal();currentSlide(15)">
                 <p>San Francisco Pier 7</p><br />
             </div>
-        </div>   
+        </div>
         <div class="row">
             <div class="column">
-                <img src="~/images/DSC00805-2-re.jpg" class="responsive">
+                <img src="~/images/DSC00805-2-re.jpg" class="responsive" onclick="openModal();currentSlide(16)">
                 <p>Baker's Beach</p><br />
             </div>
             <div class="column">
-                <img src="~/images/DSC00801-re-2.jpg" class="responsive">
+                <img src="~/images/DSC00801-re-2.jpg" class="responsive" onclick="openModal();currentSlide(17)">
                 <p>Baker's Beach</p><br />
             </div>
             <div class="column">
-                <img src="~/images/RL3-3-re.jpg" class="responsive">
+                <img src="~/images/RL3-3-re.jpg" class="responsive" onclick="openModal();currentSlide(18)">
                 <p>UCI School of Business</p><br />
+            </div>
+        </div>
+
+        <!-- The Modal/Lightbox -->
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+
+                <div class="mySlides">
+                    <div class="numbertext">1 / 18</div>
+                    <img src="~/images/RL6-2-lb.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">2 / 18</div>
+                    <img src="~/images/RL7-lb.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">3 / 18</div>
+                    <img src="~/images/DSC01353-lb.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">4 / 18</div>
+                    <img src="~/images/DSC00943-2-lb.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">5 / 18</div>
+                    <img src="~/images/DSC00920-2-lb.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">6 / 18</div>
+                    <img src="~/images/DSC01169-lb.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">7 / 18</div>
+                    <img src="~/images/TE4-lb.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">8 / 18</div>
+                    <img src="~/images/TE3-lb.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">9 / 18</div>
+                    <img src="~/images/TE6-lb.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">10 / 18</div>
+                    <img src="~/images/DSC00625-lb.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">11 / 18</div>
+                    <img src="~/images/DSC00601-lb.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">12 / 18</div>
+                    <img src="~/images/DSC00606-lb.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">13 / 18</div>
+                    <img src="~/images/AN4-lb.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">14 / 18</div>
+                    <img src="~/images/AN12-lb.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">15 / 18</div>
+                    <img src="~/images/AN1-lb.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">16 / 18</div>
+                    <img src="~/images/DSC00805-2-lb.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">17 / 18</div>
+                    <img src="~/images/DSC00801-lb.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">18 / 18</div>
+                    <img src="~/images/RL3-lb.jpg" style="width:100%">
+                </div>
+
+                <!-- Next/previous controls (Hard to see on images) -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <!-- Caption text (Optional) -->
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
             </div>
         </div>
 
