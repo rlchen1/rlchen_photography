@@ -12,7 +12,10 @@
     <script>
         // Open the Modal
         function openModal() {
-            document.getElementById("myModal").style.display = "block";
+            /* Only allow lightbox modal feature on screen widths >599px */
+            if ($(window).width() > 599) {
+                document.getElementById("myModal").style.display = "block";
+            }
         }
 
         // Close the Modal
@@ -49,13 +52,6 @@
             slides[slideIndex - 1].style.display = "block";
             dots[slideIndex - 1].className += " active";
             captionText.innerHTML = dots[slideIndex - 1].alt;
-
-            $('#myModal').on('shown.bs.modal', function () {
-                var width = $(window).width();
-                if (width < 600) {
-                    $('#myModal').modal('hide')
-                }
-            });
         }
     </script>
 </head>
@@ -87,7 +83,7 @@
                 <p>Baker's Beach</p><br />
             </div>
             <div class="column">
-                <img src="~/images/RC6-re.jpg" class="responsive">
+                <img src="~/images/RC6-re.jpg" class="responsive" onclick="openModal();currentSlide(5)">
                 <p>Lake Elizabeth Park</p><br />
             </div>
         </div>
@@ -99,23 +95,28 @@
             <div class="modal-content">
 
                 <div class="mySlides">
-                    <div class="numbertext">1 / 4</div>
-                    <img src="~/images/DSC01144-re.jpg" style="width:100%">
+                    <div class="numbertext">1 / 5</div>
+                    <img src="~/images/DSC01144-lb.jpg" style="width:100%">
                 </div>
 
                 <div class="mySlides">
-                    <div class="numbertext">2 / 4</div>
+                    <div class="numbertext">2 / 5</div>
                     <img src="~/images/DSC01138-lb.jpg" style="width:100%">
                 </div>
 
                 <div class="mySlides">
-                    <div class="numbertext">3 / 4</div>
-                    <img src="~/images/DSC01132-re.jpg" style="width:100%">
+                    <div class="numbertext">3 / 5</div>
+                    <img src="~/images/DSC01132-lb.jpg" style="width:100%">
                 </div>
 
                 <div class="mySlides">
-                    <div class="numbertext">4 / 4</div>
-                    <img src="~/images/DSC00732-re.jpg" style="width:100%">
+                    <div class="numbertext">4 / 5</div>
+                    <img src="~/images/DSC00732-lb.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">5 / 5</div>
+                    <img src="~/images/RC6-lb.jpg" style="width:100%">
                 </div>
 
                 <!-- Next/previous controls (Hard to see on images) -->

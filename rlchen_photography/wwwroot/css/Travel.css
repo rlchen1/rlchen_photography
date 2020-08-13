@@ -76,7 +76,6 @@
     background-color: black;
 }
 
-/* Need to remove LB from mobile, rescale all LB images, shrink LB size */
 /* Modal Content */
 .modal-content {
     position: relative;
@@ -85,6 +84,8 @@
     padding: 0;
     width: 70%;
     max-width: 1000px;
+    height: 90%;
+    max-height: 1000px;
 }
 
 /* The Close Button */

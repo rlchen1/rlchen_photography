@@ -9,6 +9,51 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="~/css/Food.css" type="text/css" />
+    <script>
+        // Open the Modal
+        function openModal() {
+            /* Only allow lightbox modal feature on screen widths >599px */
+            if ($(window).width() > 599) {
+                document.getElementById("myModal").style.display = "block";
+            }
+        }
+
+        // Close the Modal
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            captionText.innerHTML = dots[slideIndex - 1].alt;
+        }
+    </script>
 </head>
 <body>
     <div class="row">
@@ -20,33 +65,78 @@
 
         <div class="row">
             <div class="column">
-                <img src="~/images/food6-re.jpg" class="responsive">
+                <img src="~/images/food1-lb.jpg" class="responsive" onclick="openModal();currentSlide(1)">
                 <p>Ichiran Ramen</p><br />
             </div>
             <div class="column">
-                <img src="~/images/food5-re.jpg" class="responsive">
+                <img src="~/images/food5-lb.jpg" class="responsive" onclick="openModal();currentSlide(2)">
                 <p>Sanuki Udon Hanamaru</p><br />
             </div>
             <div class="column">
-                <img src="~/images/Food1-re.jpg" class="responsive">
+                <img src="~/images/Food1a-lb.jpg" class="responsive" onclick="openModal();currentSlide(3)">
                 <p>Soondubu Jjigae - Homemade</p><br />
             </div>
         </div>
         <div class="row">
             <div class="column">
-                <img src="~/images/food4-re.jpg" class="responsive">
+                <img src="~/images/food4-lb.jpg" class="responsive" onclick="openModal();currentSlide(4)">
                 <p>Tartar Fried Chicken & Miso - Sanagi</p><br />
             </div>
             <div class="column">
-                <img src="~/images/food2-re.jpg" class="responsive">
+                <img src="~/images/food2-lb.jpg" class="responsive" onclick="openModal();currentSlide(5)">
                 <p>Wonton Soup - Cheung Hing</p><br />
             </div>
             <div class="column">
-                <img src="~/images/food3-re.jpg" class="responsive">
+                <img src="~/images/food3-lb.jpg" class="responsive" onclick="openModal();currentSlide(6)">
                 <p>Chicken Katsu Sandwich - Volcano SF</p><br />
             </div>
         </div>
         <br /><br /><br />
+        <!-- The Modal/Lightbox -->
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+
+                <div class="mySlides">
+                    <div class="numbertext">1 / 6</div>
+                    <img src="~/images/food6-re.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">2 / 6</div>
+                    <img src="~/images/food5-re.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">3 / 6</div>
+                    <img src="~/images/Food1-re.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">4 / 6</div>
+                    <img src="~/images/food4-re.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">5 / 6</div>
+                    <img src="~/images/food2-re.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">6 / 6</div>
+                    <img src="~/images/food3-re.jpg" style="width:100%">
+                </div>
+
+                <!-- Next/previous controls (Hard to see on images) -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <!-- Caption text (Optional) -->
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+            </div>
+        </div>
 
         <div class="right-bg"></div>
     </div>
